@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*!
+ * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document
+ * traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use
+ * API that works across a multitude of browsers. With a combination of versatility and
+ * extensibility, jQuery has changed the way that millions of people write JavaScript.
+ *
+ * &lt;http://jquery.com/&gt;
+ */
+
+<span id='jQuery-method-constructor'><span id='jQuery'>/**
+</span></span> * @class jQuery
+ * @alternateClassName $
+ *
+ * Return a collection of matched elements either found in the DOM based on passed argument(s) or
+ * created by passing an HTML string.
+ *
+ * &lt;http://api.jquery.com/jQuery/&gt;
+ *
+ * @constructor
+ * @param {string|HTMLElement|Array|Object} [selector]
+ * @param {HTMLDocument} [ownerDocument] A document by which a string of HTML will be interpreted.
+ */
+
+<span id='jqXHR'>/**
+</span> * @class jqXHR
+ * @mixins jQuery.Promise
+ *
+ * As of jQuery 1.5, the $.ajax() method returns the jqXHR object, which is a superset of the
+ * XMLHTTPRequest object.
+ *
+ * &lt;http://api.jquery.com/Types/#jqXHR&gt;
+ */
+
+<span id='jQuery-Promise'>/**
+</span> * @class jQuery.Promise
+ *
+ * This object provides a subset of the methods of the jQuery.Deferred object
+ * ({@link jQuery.Deferred#then then}, {@link jQuery.Deferred#done done},
+ * {@link jQuery.Deferred#fail fail}, {@link jQuery.Deferred#always always},
+ * {@link jQuery.Deferred#pipe pipe}, and {@link jQuery.Deferred#state state}) to prevent users
+ * from changing the state of the Deferred.
+ *
+ * &lt;http://api.jquery.com/Types/#Promise&gt;
+ */
+
+<span id='jQuery-method-add'>/**
+</span> * @method add
+ * @member jQuery
+ *
+ * Add elements to the set of matched elements.
+ *
+ * &lt;http://api.jquery.com/add/&gt;
+ *
+ * @param {string|HTMLElement|jQuery} add Elements to add
+ * @chainable
+ */
+
+<span id='jQuery-method-attr'>/**
+</span> * @method attr
+ * @member jQuery
+ *
+ * Get the value of an attribute for the first element in the set of matched elements or set one or
+ * more attributes for every matched element.
+ *
+ * &lt;http://api.jquery.com/attr/&gt;
+ *
+ * @param {string|Object} attributeName The name of the attribute to get. Or, an object of
+ *  attribute-value pairs to set.
+ * @param {string|Function} [value] A value to set for the attribute. Or, a function returning the
+ *  value to set.
+ * @param {string} [value.index] The index position of the element in the set.
+ * @param {string} [value.oldValue] The old attribute value.
+ * @returns {string|jQuery}
+ */
+
+<span id='jQuery-Callbacks-method-add'>/**
+</span> * @method add
+ * @member jQuery.Callbacks
+ *
+ * Add a callback or a collection of callbacks to a callback list.
+ *
+ * &lt;http://api.jquery.com/callbacks.add/&gt;
+ *
+ * @param {Function|Array} callbacks A function, or array of functions, that are to be added to the callback list.
+ * @chainable
+ */
+
+<span id='jQuery-Callbacks-method-has'>/**
+</span> * @method has
+ * @member jQuery.Callbacks
+ *
+ * Determine whether a supplied callback is in a list
+ *
+ * &lt;http://api.jquery.com/callbacks.has/&gt;
+ *
+ * @param {Function} callback The callback to search for.
+ * @returns {boolean}
+ */
+
+<span id='jQuery-Promise-method-done'>/**
+</span> * @method done
+ * @member jQuery.Promise
+ *
+ * Add handlers to be called when the Deferred object is resolved.
+ *
+ * &lt;http://api.jquery.com/deferred.done/&gt;
+ *
+ * @param {Function...} doneCallbacks A function, or array of functions, that are called when the Deferred is resolved.
+ * @chainable
+ */
+
+<span id='jQuery-Promise-method-then'>/**
+</span> * @method then
+ * @member jQuery.Promise
+ *
+ * &lt;http://api.jquery.com/deferred.then/&gt;
+ *
+ * @chainable
+ */
+
+<span id='jQuery-Callbacks-method-constructor'><span id='jQuery-Callbacks'>/**
+</span></span> * @class jQuery.Callbacks
+ *
+ * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
+ *
+ * &lt;http://api.jquery.com/jQuery.Callbacks/&gt;
+ *
+ * @constructor
+ *
+ * The jQuery.Callbacks() constructor creates a instance. The `new` operator is optional.
+ *
+ * @param {string} flags An optional list of space-separated flags that change how the callback list behaves.
+ */
+
+<span id='jQuery-Deferred-method-constructor'><span id='jQuery-Deferred'>/**
+</span></span> * @class jQuery.Deferred
+ * @mixins jQuery.Promise
+ *
+ * A constructor function that returns a chainable utility object with methods to register multiple
+ * callbacks into callback queues, invoke callback queues, and relay the success or failure state
+ * of any synchronous or asynchronous function.
+ *
+ * &lt;http://api.jquery.com/jQuery.Deferred/&gt;
+ *
+ * @constructor
+ *
+ * The jQuery.Deferred() constructor creates a new Deferred object. The `new` operator is optional.
+ *
+ * @param {Function} [beforeStart] A function that is called just before the constructor returns.
+ * @param {jQuery.Deferred} beforeStart.deferred The constructed deferred object.
+ */
+
+<span id='jQuery-static-method-ajax'>/**
+</span> * @static
+ * @method ajax
+ * @member jQuery
+ *
+ * Perform an asynchronous HTTP (Ajax) request.
+ *
+ * &lt;http://api.jquery.com/jQuery.ajax/&gt;
+ *
+ * @param {string} [url] A string containing the URL to which the request is sent.
+ * @param {Object} [settings] A set of key/value pairs that configure the Ajax request. All
+ *  settings are optional. A default can be set for any option with $.ajaxSetup().
+ * @returns {jqXHR}
+ */
+
+<span id='jQuery-static-method-ajaxSetup'>/**
+</span> * @static
+ * @method ajaxSetup
+ * @member jQuery
+ *
+ * Set default values for future Ajax requests. Its use is not recommended.
+ *
+ * &lt;http://api.jquery.com/jQuery.ajaxSetup/&gt;
+ *
+ * @param {Object} settings A set of key/value pairs that configure the default Ajax request. All options are optional.
+ */
+</pre>
+</body>
+</html>
