@@ -1,0 +1,14 @@
+{
+  "name": "jsduck-jquery",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "grunt test",
+    "prepublish": "grunt build && jsduck --warnings-exit-nonzero"
+  },
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-watch": "0.5.3"
+  }
+}

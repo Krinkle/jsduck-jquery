@@ -1,0 +1,38 @@
+[
+	{
+		"name": "jQuery",
+		"groups": [
+			{
+				"name": "Classes",
+				"classes": [
+					"jQuery",
+					"jQuery.*"
+				]
+			},
+			{
+				"name": "Types",
+				"classes": [
+					"jqXHR"
+				]
+			}
+		]
+	},
+	{
+		"name": "ECMAScript",
+		"groups": [
+			{
+				"name": "Standard Built-in Objects",
+				"classes": [
+					"Object",
+					"Function",
+					"Array",
+					"String",
+					"Boolean",
+					"Number",
+					"Date",
+					"RegExp"
+				]
+			}
+		]
+	}
+]

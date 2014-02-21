@@ -1,0 +1,10 @@
+{
+	"--title": "jQuery API - Documentation",
+	"--output": "dist/doc",
+	"--builtin-classes": true,
+	"--categories": "jsduck-categories.json",
+	"--external": "HTMLDocument,HTMLElement",
+	"--": [
+		"dist/jsduck-jquery.js"
+	]
+}
